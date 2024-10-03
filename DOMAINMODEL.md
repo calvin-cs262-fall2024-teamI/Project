@@ -12,7 +12,7 @@ classDiagram
 
     class Profile {
     components
-    +sampleFunc()
+    +sampleFunc()                               
     }
   
     class Workouts {
