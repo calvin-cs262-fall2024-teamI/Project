@@ -1,7 +1,7 @@
 ```mermaid
 classDiagram
     class Community {
-    components
+    Numerous Users
     +sampleFunc()
     }
 
@@ -11,17 +11,21 @@ classDiagram
     }
 
     class Profile {
-    components
+    Account
     +sampleFunc()                               
     }
   
     class Workouts {
-        components
+        Hypertophy
+        Strength
+        Cardio
+        Recovery
         +sampleFunc()
     }
 
     class Login {
-        components
+        Username
+        Password
         +sampleFunc()
     }
 
@@ -30,7 +34,21 @@ classDiagram
         +sampleFunc()
     }
 
-    Community "1" --> "many" User
+    class Messager {
+        Match/Pass
+        Send texts
+        +sampleFunc()
+    }
+
+    class Rating {
+        Multiple Reviews
+        Shown in 5 Star Format
+        +sampleFunc()
+    }   
+
+    Profile "1" --> "0..*" Rating
+    Community "1" --> "1" Messager
+    Community "1" --> "0..*" User
     User "0..*" --> "1" Profile
     Profile "1" --> "1..*" Workouts
     Profile "1" --> "1" Login
