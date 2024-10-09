@@ -1,55 +1,59 @@
 ```mermaid
 classDiagram
-    class Community {
-    Numerous Users
-    +sampleFunc()
-    }
-
     class User {
-    components
-    +sampleFunc()
+        username
+        password
+        email
+        location
+        experienceLevel
+        profilePicture
+        +updateProfile()
+        +sendMessage()
     }
 
-    class Profile {
-    Account
-    +sampleFunc()                               
+    class PersonalTrainer {
+        certificationLevel
+        experienceOnJob
+        cost
+        +changeCost()
+    }
+
+    class Message {
+        send
+        receiver
+        content
+        timestamp
+        +send()
+        +receive()
+        +delete()
     }
   
-    class Workouts {
-        Hypertophy
-        Strength
-        Cardio
-        Recovery
-        +sampleFunc()
+    class Workout {
+        workoutType
+        time
+        location
+        +findWorkout()
     }
 
-    class Login {
-        Username
-        Password
-        +sampleFunc()
+    class MatchCriteria {
+        workoutType
+        experienceLevel
+        location
+        trainerOrNot
+        +filterUsers()
     }
 
-    class Picture {
-        components
-        +sampleFunc()
+    class Review {
+        rating
+        comment
+        timestamp
+        +addReview()
+        +updateReview()
+        +deleteReview()
     }
 
-    class Messager {
-        Match/Pass
-        Send texts
-        +sampleFunc()
-    }
-
-    class Rating {
-        Multiple Reviews
-        Shown in 5 Star Format
-        +sampleFunc()
-    }   
-
-    Profile "1" --> "0..*" Rating
-    Community "1" --> "1" Messager
-    Community "1" --> "0..*" User
-    User "0..*" --> "1" Profile
-    Profile "1" --> "1..*" Workouts
-    Profile "1" --> "1" Login
-    Profile "1" --> "1" Picture
+    User <-- PersonalTrainer
+    User "1" -- "1" MatchCriteria
+    User "1" -- "0..*" Message 
+    User "1" -- "0..*" Workout 
+    User "1" -- "0..*" Review 
