@@ -11,3 +11,14 @@ This app will be designed for fitness novices, enthusiasts, and athletes (of any
 * Drouillard, Allison
 * McNearey, Madi  
 * Niu, ZhongLin 
+
+## Links
+- Project Repository
+  - https://github.com/calvin-cs262-fall2024-teamI/Project
+- Client Repository
+  - https://github.com/calvin-cs262-fall2024-teamI/SwoleMateClient
+- Service Repository
+  - https://github.com/calvin-cs262-fall2024-teamI/SwoleMateService
+
+## Notes
+- All of our project documents can be found and access through the "Project Repository" link above.
